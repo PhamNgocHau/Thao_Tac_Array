@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tudien</title>
+</head>
+<body>
+<div>
+    <input type="text" id="txt">
+    <button type="button" onclick="Seach()">Seach</button>
+    <p id="result"></p>
+</div>
+<script>
+    let Eng =['Black','Red','Blue','Orange'];
+    let Vn = ['màu đen','màu đỏ','màu xanh','màu cam'];
+    function Seach() {
+        let input = document.getElementById('txt').value;
+        for (let i = 0; i < Eng.length ; i++){
+            if(input === Eng[i]){
+                document.getElementById('result').innerHTML = Vn[i];
+                return Vn[i];
+            }
+        }
+        alert('Not Find');
+        return false;
+    }
+</script>
+</body>
+</html>
